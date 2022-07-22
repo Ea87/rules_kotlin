@@ -90,6 +90,7 @@ kt_jvm_library(
     deps = [
         ":generated_lib",
         "//third_party:dagger",
+        "//third_party:auto-factory",
         "@maven//:org_jetbrains_kotlinx_kotlinx_coroutines_core",
     ],
 )

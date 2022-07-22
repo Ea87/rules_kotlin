@@ -38,6 +38,7 @@ maven_install(
         "com.google.dagger:dagger-producers:2.41",
         "javax.inject:javax.inject:1",
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2",
+        "com.google.auto.factory:auto-factory:1.0.1"
     ],
     repositories = [
         "https://repo1.maven.org/maven2",

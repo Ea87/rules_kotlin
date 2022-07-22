@@ -24,7 +24,8 @@ class CoffeeMaker @Inject internal constructor(
   // Create a possibly costly heater only when we use it.
   private val heater: Lazy<Heater>,
   private val pump: Pump,
-  private val string: String
+  private val string: String,
+  private val fooFactory: FooFactory
 ) {
 
   suspend fun brew() {
@@ -35,6 +36,7 @@ class CoffeeMaker @Inject internal constructor(
       println(" [_]P coffee! [_]P ")
       println(string)
       heater.get().off()
+      fooFactory.create("bar").print()
     }
   }
 }

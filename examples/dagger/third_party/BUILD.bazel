@@ -19,3 +19,19 @@ java_library(
         "@maven//:javax_inject_javax_inject",
     ],
 )
+
+java_library(
+    name = "auto-factory",
+    exported_plugins = ["auto-factory-processor"],
+    visibility = ["//visibility:public"],
+    exports = ["@maven//:com_google_auto_factory_auto_factory"]
+)
+
+java_plugin(
+    name = "auto-factory-processor",
+    generates_api = True,
+    processor_class = "com.google.auto.factory.processor.AutoFactoryProcessor",
+    deps = [
+        "@maven//:com_google_auto_factory_auto_factory",
+    ],
+)

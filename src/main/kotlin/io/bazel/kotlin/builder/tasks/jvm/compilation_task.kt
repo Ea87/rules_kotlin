@@ -149,7 +149,7 @@ internal fun JvmCompilationTask.kaptArgs(
       "stubs" to listOf(directories.stubs),
       "incrementalData" to listOf(directories.incrementalData),
       "javacArguments" to listOf(javacArgs.let(::encodeMap)),
-      "correctErrorTypes" to listOf("false"),
+      "correctErrorTypes" to listOf("true"),
       "verbose" to listOf(context.whenTracing { "true" } ?: "false"),
       "apclasspath" to inputs.processorpathsList,
       "aptMode" to listOf(aptMode)
